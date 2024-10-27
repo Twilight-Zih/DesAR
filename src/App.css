@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#ARButton {
+  bottom: 20%;
+}
+
+.place-button,
+.remove-button,
+.rotate-left-button,
+.rotate-right-button {
+  padding: 1em;
+  font-size: 2vw; /* Adjust font size based on window width */
+  min-width: 50px; /* Ensure a minimum size for smaller screens */
+  max-width: 100px; /* Limit the maximum size for larger screens */
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.place-button {
+  position: absolute;
+  bottom: 30vh; /* 40% from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+}
+
+.remove-button {
+  position: absolute;
+  bottom: 25vh; /* Below the place button */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rotate-left-button {
+  position: absolute;
+  bottom: 30vh; /* 40% from the bottom */
+  left: 20vw; /* 20% from the left */
+  transform: translateX(-50%);
+}
+
+.rotate-right-button {
+  position: absolute;
+  bottom: 30vh; /* 40% from the bottom */
+  right: 20vw; /* 20% from the right */
+  transform: translateX(50%);
+}
+
+/* Ensure buttons are responsive on different screen sizes */
+@media (max-width: 600px) {
+  .place-button,
+  .remove-button,
+  .rotate-left-button,
+  .rotate-right-button {
+    font-size: 3vw;
+    padding: 0.8em;
+  }
+}
